@@ -3,8 +3,8 @@ name: pipeline-ci
 on:
   push:
     branches:
-      -  feature-*
-
+      -  feature-ms-sebastianpizarro-mensaje
+      
 jobs:
   build:
     runs-on: 'ubuntu-latest'
