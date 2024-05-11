@@ -12,11 +12,9 @@ public class SmokeTest {
 
 	@Autowired
 	private HomeController controller;
-	private GreetingController controller_g;
 
 	@Test
 	public void contextLoads() throws Exception {
 		assertThat(controller).isNotNull();
-		assertThat(controller_g).isNotNull();
 	}
 }
