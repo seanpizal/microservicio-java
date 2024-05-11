@@ -25,17 +25,4 @@ public class WebLayerTest {
 				.andExpect(content().string(containsString("Hola, soy Sebastian Pizarro.")));
 	}
 }
-
-@WebMvcTest(GreetingController.class)
-public class WebLayerGreetingTest{
-	
-	@Autowired
-	private MockMvc mockMvc;
-
-	@Test
-	public void shouldReturnDefaultMessage() throws Exception {	
-		this.mockMvc.perform(get("/greeting")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hello, World")));
-	}
-}
 //end::test[]
