@@ -12,6 +12,7 @@ public class SmokeTest {
 
 	@Autowired
 	private HomeController controller;
+	private GreetingController controller;
 
 	@Test
 	public void contextLoads() throws Exception {
