@@ -49,20 +49,20 @@ jobs:
         with:
           scanMetadataReportFile: target/sonar/report-task.txt
 
-      # - name: Docker Login 
-      #   uses: docker/login-action@v3.1.0
-      #   with:
-      #     username: ${{ secrets.DOCKER_USERNAME }}
-      #     password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Docker Login 
+        uses: docker/login-action@v3.1.0
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # - name: Set Up Docker Buildx
-      #   uses: docker/setup-buildx-action@v3
+      - name: Set Up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      # - name: Build
-      #   run: |
-      #     docker build -t escapev/microservicio-java:latest .
+      - name: Build
+        run: |
+          docker build -t escapev/microservicio-java:latest .
           
-      # - name: Push
-      #   run: |
-      #     docker push escapev/microservicio-java:latest 
+      - name: Push
+        run: |
+          docker push escapev/microservicio-java:latest 
       
