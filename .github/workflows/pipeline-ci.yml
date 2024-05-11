@@ -65,4 +65,13 @@ jobs:
       - name: Push
         run: |
           docker push escapev/microservicio-java:latest 
-      
+    
+    deploy:
+      needs: build
+      runs-on: self-hosted
+
+      steps:
+
+        - name: Deploy on Kubernetes
+          run: |
+            kubectl apply -f deployment.yaml
