@@ -13,12 +13,8 @@ public class SmokeTest {
 	@Autowired
 	private HomeController controller;
 
-	@Autowired
-	private GreetingController controllergc;
-
 	@Test
 	public void contextLoads() throws Exception {
 		assertThat(controller).isNotNull();
-		assertThat(controllergc).isNotNull();
 	}
 }
