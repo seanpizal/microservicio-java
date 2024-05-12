@@ -26,6 +26,6 @@ public class TestingWebApplicationTest {
 				.andExpect(content().string(containsString("Hola, soy Sebastian Pizarro.")));
 
 		this.mockMvc.perform(get("/greeting")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hola, soy Sebastian Pizarro.")));
+				.andExpect(content().string(containsString("Hello, World")));
 	}
 }
